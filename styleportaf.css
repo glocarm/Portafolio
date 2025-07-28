@@ -1,0 +1,247 @@
+/* Reset básico para eliminar márgenes y paddings predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e6e3e3;
+  color: #333;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3498db;
+}
+
+/* Secciones */
+section {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Estilo para los proyectos */
+.proyecto {
+  margin-bottom: 30px;
+  border:  #2c3e50 2px solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.proyecto h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #34495e;
+  text-align: center;
+}
+
+.proyecto p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Estilo para los iframes */
+#proyecto-iframe {
+  margin: 10px 0;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+#proyecto-iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Enlaces en proyectos */
+.proyecto a {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.proyecto a:hover {
+  background-color: #2980b9;
+}
+
+/* Formulario de contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #3498db;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-radius: 8px;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #proyecto-iframe {
+    height: 250px;
+  }
+}
+.logo{
+  border-radius: 360px;
+  width: 200px;
+}
+.habilidades{
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+#habilidades h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-item img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.icon-item  {
+    font-size: 48px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.icon-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio - Desarrollador Fullstack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styleportaf.css" />
+  </head>
+  <body>
+    <header>
+      <div class="col-6 ">
+        <img src="cv.png" class="logo" alt="Foto CV">
+      </div>
+      <div>
+        <h1>Mi Portafolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        ¡Hola! Soy una desarrolladora fullstack dedicada a crear
+        aplicaciones web modernas, me apasiona la tecnología y siempre estoy
+        aprendiendo nuevas habilidades.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyecto">
+        <h3>Carrito de Compras JS</h3>
+        <p>
+          Proyecto de Carrito de compras, utilizando arreglo para los productos
+          y JavaScript. Agrega al carrito o Vacía el carrito, actualizando
+          cantidades en stock.
+        </p>
+        <div id="proyecto-iframe">
+          <iframe
+            id="iframe-content"
+            src="https://glocarm.github.io/CarritoCompras/"
+            frameborder="0"
+          >
+          </iframe>
+        </div>
+
+        <a  target="_blank" href="https://glocarm.github.io/CarritoCompras/"
+          >Ver en Navegador
+        </a>
+      </div>
+      <div class="proyecto">
+        <h3>Sistema de Registro Escolar</h3>
+        <p>
+          El proyecto permite la gestión administrativa de una institución educativa, como lo es. Gestion de cursos, materias, alumnos, profesores, asignación de materias a profesores, representantes y su asociación a alumnos. (Admin - super)
+        </p>
+        <div id="proyecto-iframe">
+          <iframe
+            id="iframe-content"
+            src="https://glocarm.pythonanywhere.com/"
+            frameborder="0"
+          >
+          </iframe>
+        </div>
+        <a target="_blank" href="https://glocarm.pythonanywhere.com/"
+          >Ver en Navegador</a
+        >
+      </div>
+      <div class="proyecto">
+        <h3>Sistema de Turnos Médicos</h3>
+        <p>
+          Proyecto de Gestion de Turnos Médicos, permite el registro y gestión de Usuarios, especialidades, médicos y asignación de turnos.
+        </p>
+          <div id="proyecto-iframe">
+            <iframe width="300" height="115" src="https://www.youtube.com/embed/SlVYwlVZK5s?si=NpEkCE7D-wUtEv87" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; " ></iframe>
+        </div>
+      </div>
+      <div class="proyecto">
+        <h3>Aplicación del Clima</h3>
+        <p>
+          Permite conocer el pronóstico del clima de 3 dias.
+        </p>
+        <div id="proyecto-iframe">
+          <iframe
+            id="iframe-content"
+            src="https://climaaapp.netlify.app/"
+            frameborder="0"
+          >
+          </iframe>
+        </div>
+        <a target="_blank" href="https://climaaapp.netlify.app/">Ver proyecto</a>
+      </div>
+    </section>
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="icon-container">
+            <div class="icon-item" title="html">
+                <!--<i class="fab fa-python"></i>-->
+                <img src="Icons Habilidades/HTML.png" alt="html">
+                <p>HTML</p>
+            </div>
+            <div class="icon-item" title="css">
+                 <img src="Icons Habilidades/CSS.png" alt="css">
+                <p>CSS</p>
+            </div>
+            <div class="icon-item" title="Javscript">
+                <img src="Icons Habilidades/JS.png" alt="js">
+                <p>JavaScript</p>
+            </div>
+            <div class="icon-item" title="Python">
+                <img src="Icons Habilidades/python.png" alt="py">
+                <p>Python</p>
+            </div>
+            <div class="icon-item" title="postgresql">
+                 <img src="Icons Habilidades/postgresql.png" alt="postgresql">
+                <p>Postgresql</p>
+            </div>
+            <div class="icon-item" title="MongoDB">
+                 <img src="Icons Habilidades/mongodb.png" alt="MongoDB">
+                <p>MongoDB</p>
+            </div>
+            <div class="icon-item" title="React">
+                 <img src="Icons Habilidades/REACT.png" alt="JS"/>
+                <p>React</p>
+            </div>
+             <div class="icon-item" title="Flask">
+                 <img src="Icons Habilidades/flask.png" alt="Flask"/>
+                <p>React</p>
+            </div>
+            <!-- Agrega más iconos según tus habilidades -->
+        </div>
+    </section>
+
+
+
+ <!--
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>-->
+
+    <script>
+      function openProject(event) {
+        event.preventDefault(); // Evita que el enlace se abra de inmediato
+        const url = event.currentTarget.href; // Obtiene la URL del proyecto
+        const iframe = document.getElementById("iframe-content");
+        const proyectoIframe = document.getElementById("proyecto-iframe");
+
+        iframe.src = url; // Establece la URL del iframe
+        proyectoIframe.style.display = "block"; // Muestra el iframe
+      }
+    </script>
+    <footer>
+      <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
